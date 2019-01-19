@@ -3,7 +3,7 @@
     <h1 class="header_page_title">{{ pageTitle }}</h1>
     <section v-if="live">
       <div class="loading" v-if="loading">LOADING</div>
-      <div v-else>
+      <div class="content" v-else>
         <h1>Placeholder content for Day 5</h1>
       </div>
     </section>
@@ -33,7 +33,7 @@
       });
 
       this.$nextTick(() => {
-        if(this.$parent.$data.daysRemainingTillEvent <= '1') {
+        if(this.$parent.$data.daysRemainingTillEvent < '1') {
           this.live = true;
           this.loading = false
         } else {

@@ -35,7 +35,7 @@ export default {
       numberOfDaysOfLeadUpMaterial: 5,
       daysRemainingTillEvent: null,
       isExpired: null,
-      debug: false,
+      debug: true,
     }
   },
   mounted () {
@@ -54,7 +54,7 @@ export default {
       // currently, setting debug to true
       // will on affect menu items.
       if(this.debug) {
-        this.daysRemainingTillEvent = 3;
+        this.daysRemainingTillEvent = 2;
       }
     },
     expired (ex) {
@@ -799,7 +799,7 @@ form {
 }
 @media screen and (max-width: 540px) {
   iframe {
-    height: 350px
+    height: 315px
   }
   .content h1 {
     font-size: 1em;
