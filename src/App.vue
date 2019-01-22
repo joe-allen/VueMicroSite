@@ -54,7 +54,7 @@ export default {
       // currently, setting debug to true
       // will on affect menu items.
       if(this.debug) {
-        this.daysRemainingTillEvent = 2;
+        this.daysRemainingTillEvent = 1;
       }
     },
     expired (ex) {
@@ -799,7 +799,7 @@ form {
 }
 @media screen and (max-width: 540px) {
   iframe {
-    height: 315px
+    height: 320px
   }
   .content h1 {
     font-size: 1em;
