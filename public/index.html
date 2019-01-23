@@ -106,9 +106,11 @@
 
   <script>
     document.addEventListener('countdown-expired', function (e) {
+      // window.location.href = "https://"
       console.log('timer expired', e);
     }, false);
-    document.addEventListener('countdown-thirty-minutes-left', function (e) {
+    document.addEventListener('countdown-twenty-minutes-left', function (e) {
+      // window.location.href = "https://"
       console.log('timer is at or less than 30 min', e);
     }, false);
   </script>

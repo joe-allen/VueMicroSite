@@ -24,9 +24,12 @@
 
         <br><br>
 
-        <p>“I was very sick for awhile. I would get piercing headaches all the time. But when the headaches finally stopped I realized I was psychic and could tell the future. I don’t want this ability. It’s too much of a burden and I can’t shut it down.”</p>
+        <div class="left_img_container">
+          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_10/LF/production//pubs/general/common/img/altucher_circle-pic-autho-bio.png" alt="james altucher">
+          <p>“I was very sick for awhile. I would get piercing headaches all the time. But when the headaches finally stopped I realized I was psychic and could tell the future. I don’t want this ability. It’s too much of a burden and I can’t shut it down.”</p>
 
-        <p>I posted that to Craigslist over a decade ago. I was lonely and just wanted to email with people. I like helping people.</p>
+          <p>I posted that to Craigslist over a decade ago. I was lonely and just wanted to email with people. I like helping people.</p>
+        </div>
 
         <p>I would tell people I’m not psychic. But they still wanted to ask me their questions. Ask me, “What should I do?” And, this is what surprises me, I’m still friends with many of the people I emailed with.</p>
 

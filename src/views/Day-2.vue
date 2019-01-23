@@ -24,8 +24,11 @@
 
         <br><br>
 
-        <p>Nothing good ever comes from giving a stock tip.</p>
-        <p>In the worst case, death can result. In the best case, you lose your friends and someone calls you a “scumbag” on the internet.</p>
+        <div class="left_img_container">
+          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_10/LF/production//pubs/general/common/img/altucher_circle-pic-autho-bio.png" alt="james altucher">
+          <p>Nothing good ever comes from giving a stock tip.</p>
+          <p>In the worst case, death can result. In the best case, you lose your friends and someone calls you a “scumbag” on the internet.</p>
+        </div>
         <p>Reputation is a byproduct of dignity. Treating people with dignity earns their respect, earns your reputation.</p>
         <p>A prediction is meant to help — based on decades of experience, research, access, connections, and actual skin in the game. I've made a living off of predicting things and then putting money into my beliefs. Research shows the only predictor of a good predictor is... experience!</p>
         <p>Then you predict to give back. To help others. And because you participate in the ongoing conversation about what the future has in store for all of us you get even more knowledge. I owe my reputation as a futurist, as a successful investor, as an entrepreneur and as a successful writer to these predictions.</p>

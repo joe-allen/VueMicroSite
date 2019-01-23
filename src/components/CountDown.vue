@@ -120,13 +120,14 @@
           day: '',
           hour: '',
           minute: '',
-          second: ''
+          second: '',
+          releaseCopyDayDiff: ''
         },
         distanceInWords: '',
         timesUp: false,
         webinarStartDate: '01-24-2019',
         webinarStartTime: '13:00:00',
-        webinarReleaseContentTime: '17:00:01',
+        webinarReleaseContentTime: '12:00:01',
         webinarTimeUntil: {
           day: 0,
           hour: 0,
@@ -155,6 +156,11 @@
       // BUG: if the day is in the future AND the user arrives to the page
       // 1 minute before the event the day will be one day less (e.g. User arrive
       // at 2:59pm, event starts at 3:00pm there will be 1 less day for some reason)
+
+      // BUG: if the day is in the future AND the user arrives to the page
+      // 1 hour or less before the event. The day will be one day less
+      // (e.g. User arrive at 12:15pm, event starts at 1:00pm there
+      // will be 1 less day for some reason)
 
       // Could not have done w/o the help of https://datayze.com/time-until.php and libraries used:
       // date-fns
@@ -248,12 +254,11 @@
         // the leadup copy before the startTime event
         // e.g. if eventTime is 1p, but we want to
         // release leadup copy everyday at 2am
-        this.distanceInTime.day = differenceInDays(
+        this.distanceInTime.releaseCopyDayDiff = differenceInDays(
           new Date(explodeStartDate[2], explodeStartDate[0]-1, explodeStartDate[1], parseInt(explodeCopyReleaseTime[0]), parseInt(explodeCopyReleaseTime[1]), parseInt(explodeCopyReleaseTime[2])),
           new Date(explodeCurrentDate[2], explodeCurrentDate[0]-1, explodeCurrentDate[1], parseInt(explodeCurrentTime[0]), parseInt(explodeCurrentTime[1]), parseInt(explodeCurrentTime[2]))
         );
-
-        this.$emit('distanceInDaysToEvent', this.distanceInTime.day);
+        this.$emit('distanceInDaysToEvent', this.distanceInTime.releaseCopyDayDiff);
 
         // if(is_today) {
         //   this.distanceInTime.day = differenceInDays(
@@ -266,10 +271,6 @@
         //     new Date(explodeCurrentDate[2], explodeCurrentDate[0], explodeCurrentDate[1])
         //   );
         // }
-
-        // console.log('explodeCurrentTime: ', parseInt(explodeCurrentTime[0]));
-        // console.log('explodeStartTime: ', parseInt(explodeStartTime[0]));
-        // console.log('math abs: ', Math.abs((this.distanceInTime.hour)-24));
 
         // find differend in hours minus 24
         if(parseInt(explodeStartTime[0]) <= parseInt(explodeCurrentTime[0])) {
@@ -437,12 +438,12 @@
 
           // check if timer is at 5 min marker
           // if so, dispatch an event
-          if (component.webinarTimeUntil.minute < '30' && component.webinarTimeUntil.hour == '00' && component.webinarTimeUntil.day == '0' && !this.controlDispatchEvent) {
+          if (component.webinarTimeUntil.minute < '20' && component.webinarTimeUntil.hour == '00' && component.webinarTimeUntil.day == '0' && !this.controlDispatchEvent) {
 
             // dispatch event to document
-            let fiveMinsLeft = new Event('Event');
-            fiveMinsLeft.initEvent('countdown-thirty-minutes-left', true, true);
-            document.dispatchEvent(fiveMinsLeft);
+            let twentyMinsLeft = new Event('Event');
+            twentyMinsLeft.initEvent('countdown-twenty-minutes-left', true, true);
+            document.dispatchEvent(twentyMinsLeft);
 
             // set to true so events do not
             // continue to be dispatched

@@ -11,7 +11,10 @@
     >
       <router-view/>
     </transition>
-    <count-down @isExpired="expired" @distanceInDaysToEvent="distanceInDays" />
+    <count-down
+      @isExpired="expired"
+      @distanceInDaysToEvent="distanceInDays"
+    />
     <webinar-footer/>
   </div>
 </template>
@@ -32,6 +35,7 @@ export default {
   },
   data () {
     return {
+      distanceInDaysToCopyRelease: null,
       numberOfDaysOfLeadUpMaterial: 5,
       daysRemainingTillEvent: null,
       isExpired: null,
@@ -54,7 +58,7 @@ export default {
       // currently, setting debug to true
       // will on affect menu items.
       if(this.debug) {
-        this.daysRemainingTillEvent = 1;
+        this.daysRemainingTillEvent = 0;
       }
     },
     expired (ex) {
@@ -443,6 +447,9 @@ p a,
 a {
   color: $orange;
 }
+hr {
+  border: 1px solid $teal;
+}
 section {
   display: flex;
   width: 100%;
@@ -721,6 +728,17 @@ form {
     opacity: 0
   }
 }
+.left_img_container {
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    width: auto;
+    margin-right: 15px;
+    align-self: center;
+    float: left;
+  }
+}
 
 // wistia player
 .video_container {
@@ -744,6 +762,16 @@ form {
   .wistia_responsive_wrapper {
     width: 100%;
     max-height: 100%; }
+}
+@media only screen and (max-width: 1050px) {
+  section {
+    // width: 90%;
+    max-width: 90vw;
+  }
+  h1.header_page_title {
+    font-size: 1.45em;
+    padding: 0 40px;
+  }
 }
 @media screen and (max-width: 780px) {
   .wistia_parent_container {
@@ -839,20 +867,12 @@ form {
   .pod_link:last-of-type {
     margin-bottom: 0;
   }
-
-}
-
-@media only screen and (max-width: 1050px) {
-  section {
-    // width: 90%;
-    max-width: 90vw;
+  .left_img_container {
+    img {
+      width: auto;
+      margin-bottom: 10px;
+    }
   }
-  h1.header_page_title {
-    font-size: 1.45em;
-    padding: 0 40px;
-  }
-}
-@media screen and (max-width: 540px) {
   div.pre {
     text-align: left;
     margin: 15px 0;

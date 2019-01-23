@@ -4,12 +4,11 @@
     <section v-if="live">
       <div class="loading" v-if="loading">LOADING</div>
       <div v-else>
-        <h2>Not quite time, Topper.</h2>
-        <img src="https://i.ytimg.com/vi/NK_4uHWei9c/maxresdefault.jpg" alt="" width="350px;">
+        <h1>You will be redirect shortly.</h1>
       </div>
     </section>
     <section v-else>
-      <h1>This content is locked</h1>
+      <h1>We go LIVE on <strong>January 24, 1 p.m. EST</strong>. Check back then!</h1>
     </section>
   </div>
 </template>

@@ -63,3 +63,10 @@ Also, if this is not do able by 10am Fri., please let us know since we’ll be s
 
 Thank you!
 Joe
+
+---
+
+NOTES FROM CALL w/ SEAN:
+- 2 min sizzle reel.
+Show message (slide up):
+"Sit tight, we'll begin at 1p" OR Replay

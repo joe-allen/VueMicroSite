@@ -53,10 +53,14 @@
 
         <br><br>
 
-        <p>Hi, my name is Monica McCarthy, and I’ll be hosting the <strong><em>2019 Prediction Summit</em></strong> with best-selling author and millionaire trend investor, James Altucher.</p>
-        <p>
-          Remember, we go live with James’ breakthrough moneymaking predictions on <strong>January 24th at 1PM, Eastern</strong>…
-        </p>
+        <div class="left_img_container">
+          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_10/LF/production//pubs/general/common/img/monica_circle-pic-autho-bio.png" alt="monica mcarthy">
+          <p>Hi, my name is Monica McCarthy, and I’ll be hosting the <strong><em>2019 Prediction Summit</em></strong> with best-selling author and millionaire trend investor, James Altucher.</p>
+          <p>
+            Remember, we go live with James’ breakthrough moneymaking predictions on <strong>January 24th at 1PM, Eastern</strong>…
+          </p>
+        </div>
+
         <p>
           And James has prepared an outrageous guarantee for you…
         </p>
@@ -401,7 +405,7 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .img_container {
   width: 100%;
   margin: 0 auto;

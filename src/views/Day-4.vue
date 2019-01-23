@@ -25,7 +25,10 @@
 
         <br><br>
 
-        <p><strong>Monica’s Note</strong>: James and everyone on the Choose Yourself team are blown away by the feedback we’ve had on his <em>2019 Prediction Summit</em> so far.</p>
+        <div class="left_img_container">
+          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_10/LF/production//pubs/general/common/img/monica_circle-pic-autho-bio.png" alt="monica mcarthy">
+          <p><strong>Monica’s Note</strong>: James and everyone on the Choose Yourself team are blown away by the feedback we’ve had on his <em>2019 Prediction Summit</em> so far.</p>
+        </div>
 
         <p>Remember, James goes live on <strong>January 24th at 1 p.m. EST.</strong></p>
 
@@ -37,22 +40,14 @@
 
         <p>Check out the bottom of this message for a special note about the event…</p>
 
-        <form>
-          <p>Reminder: James’ <em>2019 Prediction Summit</em> is on Thursday, January 24, at 1 p.m. EST.</p>
-          <p>We’re broadcasting it live — miss it, and you could miss your opportunity to ride three of James’ tidal-wave predictions to seven-figure wealth.</p>
-          <h1 class="cal_link_header">Add This Event to Your Calendar:</h1>
-          <div class="cal_link">
-            <a href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20190124T180000Z%2F20190124T190000Z&text=James%20Altucher%27s%202019%20Prediction%20Summit%20&location=Online%20From%20the%20Comfort%20of%20Your%20Own%20Home&details=A%20live%20broadcast%20with%20millionaire%20trend%20investor%2C%20James%20Altucher" target="_blank">Google Calendar</a>
-            <a href="https://d8yoo85ikfg26.cloudfront.net/wp-content/uploads/2019/01/James_Altuchers_2019_Prediction_Summit.ics" target="_blank">iCal Calendar</a>
-          </div>
-        </form>
+        <hr>
 
-        <form class="optInForm" id="LeadGen">
-          <h1 class="cal_link_header">Get Up-To-The-Minute Updates About The Event... And Two Special Never-To-Be-Seen-Again Bonuses ($79 Value!):</h1>
-          <iframe src="https://slicktext.com/widget/v2/f7386e59301818e98a8275c463a8a3bc" width="514" height="299" frameborder="0" /></iframe>
-        </form>
+        <br>
 
-        <p>My mom is the most pessimistic person I ever met. My dad was the most optimistic person I ever met.</p>
+        <div class="left_img_container">
+          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_10/LF/production//pubs/general/common/img/altucher_circle-pic-autho-bio.png" alt="james altucher">
+          <p>My mom is the most pessimistic person I ever met. My dad was the most optimistic person I ever met.</p>
+        </div>
 
         <p>My mother had polio when she was two. When she was four years old she had to have a "birthday party" at the hospital where she was alone behind a glass wall and the other kids were on the other side of the wall.</p>
 
@@ -81,7 +76,6 @@
         <p>"And he's a more imaginative programmer," Rita Altucher said, "He's better at designing big decisions."</p>
 
         <p>IJ Seligsohn's conclusion: "Vive la difference!"</p>
-
 
         <p>Perhaps because of her polio, she never thought things were going to work out well.</p>
 
@@ -132,12 +126,14 @@
 
         <p>My father is dead. But I am still alive.</p>
 
+        <hr>
 
+        <br>
 
-
-        <p>Monica’s Note: We’re gearing up for the big event on Thursday…</p>
-
-        <p>And James recorded a special video message for you. Click here to play it:</p>
+        <div class="left_img_container">
+          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_10/LF/production//pubs/general/common/img/monica_circle-pic-autho-bio.png" alt="monica mcarthy">
+        </div>
+        <p><strong>Monica’s Note</strong>: We’re gearing up for the big event on Thursday and James recorded a special video message for you. Click here to play it:</p>
 
         <div class="wistia_responsive_wrapper">
           <div class="wistia_embed wistia_async_e4rlkkqkmh videoFoam=true playbar=true fullscreenButton=true  playButton=false autoPlay=false">&nbsp;</div>
@@ -147,13 +143,11 @@
 
         <p>But before we get to those dream scenarios, let’s focus on a little housekeeping…</p>
 
-        <p>If you’re new to this event and missed any of the earlier content, or if you want to go back and read everything, we’ve created a whole site around this event.</p>
+        <p>
+          Below you’ll find everything we’ve covered so far:
+        </p>
 
-        <p>You can see it here: <a href="https://altucher2019summit.com">https://altucher2019summit.com</a></p>
-
-        <p>Visit as often as you’d like, for free. Inside you’ll find everything we’ve covered so far:</p>
-
-        <p><strong>A Special Welcome Message From James Altucher</strong></p>
+        <p><router-link to="/welcome"><strong>A Special Welcome Message From James Altucher</strong></router-link></p>
 
         <p><router-link to="/day-1"><strong>Day 1: Introducing Your Millionaire Trend Investor, James Altucher</strong></router-link></p>
 
@@ -230,6 +224,17 @@
 </script>
 
 <style lang="scss" scoped>
+.left_img_container {
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    width: auto;
+    margin-right: 15px;
+    align-self: center;
+    float: left;
+  }
+}
 .right_img_container {
   width: 100%;
   margin: 0 auto;
@@ -261,6 +266,12 @@
     img {
       width: 100%;
       margin-bottom: 15px;
+    }
+  }
+  .left_img_container {
+    img {
+      width: auto;
+      margin-bottom: 10px;
     }
   }
   .img_container {
