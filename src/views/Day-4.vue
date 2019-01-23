@@ -198,8 +198,12 @@
     data () {
       return {
         loading: true,
-        live: true,
-        pageTitle: "Day 4"
+        live: false,
+        pageTitle: "Event Day Preview",
+        currentDate: '',
+        currentTime: '',
+        part1StartDate: '01-24-2019',
+        part1StartTime: '08:00:00',
       }
     },
     mounted () {
@@ -212,13 +216,36 @@
       });
 
       this.$nextTick(() => {
-        if(this.$parent.$data.daysRemainingTillEvent < '2') {
+        if(this.$parent.$data.daysRemainingTillEvent < '1') {
           this.live = true;
           this.loading = false
         } else {
           this.live = false;
         }
       });
+
+      // store date and times on arrival to page
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth() + 1;
+      const day = now.getDate();
+      const hours = now.getHours();
+      const minutes = now.getMinutes() + 1;
+      const seconds = now.getSeconds();
+
+      this.currentDate = month + '-' + day + '-' + year;
+      this.currentTime = hours + ':' + minutes + ':' + seconds;
+
+      const explodeCurrentDate = this.currentDate.split('-');
+      const explodeCurrentTime = this.currentTime.split(':');
+      const explodeStartDate = this.part1StartDate.split('-');
+      const explodeStartTime = this.part1StartTime.split(':');
+
+      const expired = isPast( new Date(explodeStartDate[2], explodeStartDate[0]-1, explodeStartDate[1], parseInt(explodeStartTime[0]), parseInt(explodeStartTime[1]), parseInt(explodeStartTime[2])) );
+
+      if(expired) {
+        this.live = true;
+      }
     },
   }
 </script>

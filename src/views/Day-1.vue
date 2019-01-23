@@ -403,26 +403,3 @@
     },
   }
 </script>
-
-
-<style lang="scss">
-.img_container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-
-  img {
-    width: 60%;
-    align-self: center;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .img_container {
-    img {
-      width: 100%;
-    }
-  }
-}
-</style>

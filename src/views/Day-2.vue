@@ -192,30 +192,11 @@
     float: right;
   }
 }
-.img_container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-
-  img {
-    width: 60%;
-    align-self: center;
-  }
-  img.w100 {
-    width: 100%;
-  }
-}
 
 @media screen and (max-width: 540px) {
   .right_img_container {
     img {
       width: 60%;
-    }
-  }
-  .img_container {
-    img {
-      width: 100%;
     }
   }
 }

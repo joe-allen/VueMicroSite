@@ -739,6 +739,20 @@ form {
     float: left;
   }
 }
+.img_container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 60%;
+    align-self: center;
+  }
+  img.w100 {
+    width: 100%;
+  }
+}
 
 // wistia player
 .video_container {
@@ -877,6 +891,11 @@ form {
     text-align: left;
     margin: 15px 0;
     border-left: 6px solid #F1592A;
+  }
+  .img_container {
+    img {
+      width: 100%;
+    }
   }
 }
 @media only screen and (max-width: 380px) {

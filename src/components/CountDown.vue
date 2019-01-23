@@ -127,7 +127,7 @@
         timesUp: false,
         webinarStartDate: '01-24-2019',
         webinarStartTime: '13:00:00',
-        webinarReleaseContentTime: '12:00:01',
+        webinarReleaseContentTime: '00:00:01',
         webinarTimeUntil: {
           day: 0,
           hour: 0,

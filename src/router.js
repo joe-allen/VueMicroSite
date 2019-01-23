@@ -9,6 +9,8 @@ import Day3 from './views/Day-3.vue'
 import Day4 from './views/Day-4.vue'
 import Day5 from './views/Day-5.vue'
 import liveEvent from './views/LiveEvent.vue'
+import previewOne from './views/previewOne.vue'
+import previewTwo from './views/previewTwo.vue'
 
 Vue.use(Router)
 
@@ -50,9 +52,24 @@ export default new Router({
       component: Day5
     },
     {
+      path: '/day-5/:id',
+      name: 'Day5',
+      component: Day5
+    },
+    {
       path: '/live',
       name: 'Event',
       component: liveEvent
+    },
+    {
+      path: '/preview-1',
+      name: 'preview1',
+      component: previewOne
+    },
+    {
+      path: '/preview-2',
+      name: 'Preview2',
+      component: previewTwo
     },
     {
       path: '/not-found',
